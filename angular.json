@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "projects": {
+    "ngx-country-flag-twemoji-showcase": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "apps/ngx-country-flag-twemoji-showcase",
+      "sourceRoot": "apps/ngx-country-flag-twemoji-showcase/src",
+      "prefix": "ngx-country-flag-icons",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/ngx-country-flag-twemoji-showcase",
+            "index": "apps/ngx-country-flag-twemoji-showcase/src/index.html",
+            "main": "apps/ngx-country-flag-twemoji-showcase/src/main.ts",
+            "polyfills": "apps/ngx-country-flag-twemoji-showcase/src/polyfills.ts",
+            "tsConfig": "apps/ngx-country-flag-twemoji-showcase/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/ngx-country-flag-twemoji-showcase/src/favicon.ico",
+              "apps/ngx-country-flag-twemoji-showcase/src/assets"
+            ],
+            "styles": ["apps/ngx-country-flag-twemoji-showcase/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ngx-country-flag-twemoji-showcase/src/environments/environment.ts",
+                  "with": "apps/ngx-country-flag-twemoji-showcase/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-country-flag-twemoji-showcase:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-country-flag-twemoji-showcase:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-country-flag-twemoji-showcase:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ngx-country-flag-twemoji-showcase/tsconfig.app.json",
+              "apps/ngx-country-flag-twemoji-showcase/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/ngx-country-flag-twemoji-showcase/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/ngx-country-flag-twemoji-showcase/jest.config.js",
+            "tsConfig": "apps/ngx-country-flag-twemoji-showcase/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/ngx-country-flag-twemoji-showcase/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "ngx-country-flag-twemoji-showcase-e2e": {
+      "root": "apps/ngx-country-flag-twemoji-showcase-e2e",
+      "sourceRoot": "apps/ngx-country-flag-twemoji-showcase-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ngx-country-flag-twemoji-showcase-e2e/cypress.json",
+            "tsConfig": "apps/ngx-country-flag-twemoji-showcase-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ngx-country-flag-twemoji-showcase:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-country-flag-twemoji-showcase:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ngx-country-flag-twemoji-showcase-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/ngx-country-flag-twemoji-showcase-e2e/**/*"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "ngx-country-flag-twemoji-showcase"
+}
