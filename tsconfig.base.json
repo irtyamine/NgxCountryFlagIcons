@@ -15,7 +15,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ngx-country-flag-icons/ngx-country-flag-icons": [
+        "libs/ngx-country-flag-icons/src/index.ts"
+      ],
+      "@ngx-country-flag-icons/icons-data": ["libs/icons-data/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

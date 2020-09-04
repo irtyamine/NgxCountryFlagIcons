@@ -28,6 +28,12 @@
     "ngx-country-flag-twemoji-showcase-e2e": {
       "tags": [],
       "implicitDependencies": ["ngx-country-flag-twemoji-showcase"]
+    },
+    "ngx-country-flag-icons": {
+      "tags": []
+    },
+    "icons-data": {
+      "tags": []
     }
   }
 }

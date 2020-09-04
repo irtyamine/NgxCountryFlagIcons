@@ -127,6 +127,63 @@
           }
         }
       }
+    },
+    "ngx-country-flag-icons": {
+      "projectType": "library",
+      "root": "libs/ngx-country-flag-icons",
+      "sourceRoot": "libs/ngx-country-flag-icons/src",
+      "prefix": "ngx-country-flag-icons",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngx-country-flag-icons/tsconfig.lib.json",
+              "libs/ngx-country-flag-icons/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ngx-country-flag-icons/**/*"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ngx-country-flag-icons/jest.config.js",
+            "tsConfig": "libs/ngx-country-flag-icons/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ngx-country-flag-icons/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "icons-data": {
+      "root": "libs/icons-data",
+      "sourceRoot": "libs/icons-data/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/icons-data/tsconfig.lib.json",
+              "libs/icons-data/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/icons-data/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/icons-data/jest.config.js",
+            "tsConfig": "libs/icons-data/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
