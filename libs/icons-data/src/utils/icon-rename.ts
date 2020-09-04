@@ -22,6 +22,9 @@ function readTwemojiFlagIcons() {
   const directoryPath = path.join(__dirname, '..', '..', 'twemoji-icons');
   const outputPath = path.join(__dirname, '..', '..', 'out-twemoji');
   const fileList = fs.readdirSync(directoryPath);
+  if (!fs.existsSync(outputPath)) {
+    fs.mkdirSync(outputPath);
+  }
   // Convert from Regional Indicator Symbol Unicode to ASCII
   for (let i = fileList.length - 1; i >= 0; i--) {
     const inputFile = fileList[i];
@@ -31,7 +34,7 @@ function readTwemojiFlagIcons() {
       path.join(outputPath, outputFilename),
       (err) => {
         if (err) throw err;
-        console.log(`Move ${inputFile} complete.`);
+        console.log(`Renaming of ${inputFile} to ${outputFilename} completed.`);
       }
     );
   }
