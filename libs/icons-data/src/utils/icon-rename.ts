@@ -19,7 +19,7 @@ function fromCodepointToISO(fileName: string) {
  * characters. This is used for renaming the Twemoji icons as example.
  */
 function readTwemojiFlagIcons() {
-  const directoryPath = path.join(__dirname, '..', '..', 'twemoji-icons');
+  const directoryPath = path.join(__dirname, '..', '..', 'src-twemoji');
   const outputPath = path.join(__dirname, '..', '..', 'out-twemoji');
   const fileList = fs.readdirSync(directoryPath);
   if (!fs.existsSync(outputPath)) {

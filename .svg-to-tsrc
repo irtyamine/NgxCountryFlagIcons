@@ -1,11 +1,14 @@
 {
   "conversionType": "files",
   "srcFiles": ["./libs/icons-data/out-twemoji/**/*.svg"],
-  "outputDirectory": "./libs/icons-data/icons",
+  "outputDirectory": "./libs/icons-data/build-twemoji",
+  "iconsFolderName": "icons",
   "filename": "country-flag-icons",
   "interfaceName": "CountryFlagIcon",
   "typeName": "countryFlagIcon",
+  "generateType": true,
   "prefix": "countryFlagIcon",
-  "additionalModelFile": "./libs/ngx-country-flag-icons/src/lib",
-  "compileSources": true
+  "modelFileName": "icons-data.model",
+  "additionalModelFile": "libs/ngx-country-flag-icons/src/lib/test",
+  "compileSources": false
 }
