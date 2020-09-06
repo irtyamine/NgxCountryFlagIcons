@@ -7,12 +7,20 @@
   <h1>Welcome to {{ title }}!</h1>
 </header>
 
-<a routerLink="america">America</a>
-<a routerLink="africa">Africa</a>
+<ul>
+  <li>
+    <a routerLink="america">America</a>
+  </li>
+  <li>
+    <a routerLink="africa">Africa</a>
+  </li>
+</ul>
+
+<h1>Lazy Loaded Modules</h1>
 
 <router-outlet></router-outlet>
 
-<h2>Lazy Loaded Flags at App Module</h2>
+<h1>Lazy Loaded Flags at App Module</h1>
 
 <ngx-country-flag-icons name="co"></ngx-country-flag-icons>
 <ngx-country-flag-icons name="es"></ngx-country-flag-icons>

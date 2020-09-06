@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CountryFlagIcon, countryFlagIcon } from '@ngx-country-flag-icons/icons-data';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any',
 })
 export class NgxCountryFlagIconsService {
   private registry = new Map<string, string>();
