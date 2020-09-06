@@ -1,4 +1,4 @@
-export * as TwemojiIcons from '../../build-twemoji';
+export * from '../../build-twemoji';
 
 export type countryFlagIcon =
   | 'ac'
