@@ -6,13 +6,15 @@ import {
 } from '@ngx-country-flag-icons/ngx-country-flag-icons';
 import { TwemojiIcons } from '@ngx-country-flag-icons/icons-data';
 
+import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    NgxCountryFlagIconsModule
+    NgxCountryFlagIconsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],
@@ -20,7 +22,7 @@ import { AppComponent } from './app.component';
 export class AppModule {
   constructor(private countryFlagIconsService: NgxCountryFlagIconsService) {
     this.countryFlagIconsService.registerIcons([
-      TwemojiIcons.countryFlagIconAg,
+      TwemojiIcons.countryFlagIconEs,
     ]);
   }
 }
