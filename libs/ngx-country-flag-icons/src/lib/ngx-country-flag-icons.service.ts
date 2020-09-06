@@ -13,8 +13,8 @@ export class NgxCountryFlagIconsService {
     );
   }
 
-  public getIcon(iconName: countryFlagIcon): string | undefined {
-    if (!this.registry.has(iconName)) {
+  public getIcon(iconName: countryFlagIcon, warnings = false): string | undefined {
+    if (!this.registry.has(iconName) && warnings) {
       console.warn(
         `We could not find the Icon with the name ${iconName}, did you add it to the Icon registry?`
       );
