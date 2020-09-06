@@ -26,7 +26,8 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "generate-icons": "svg-to-ts"
+    "generate-icons": "svg-to-ts",
+    "analyze": "ng build --prod --sourceMap --namedChunks && source-map-explorer './dist/**/*.js' --html result.html --only-mapped"
   },
   "private": true,
   "dependencies": {
@@ -59,6 +60,7 @@
     "jest": "26.4.2",
     "jest-preset-angular": "8.3.1",
     "prettier": "2.1.1",
+    "source-map-explorer": "^2.5.0",
     "svg-to-ts": "^5.2.0",
     "ts-jest": "26.3.0",
     "ts-node": "~9.0.0",
