@@ -1,6 +1,6 @@
-export * from '../../build-twemoji';
+import * as TwemojiIcons from '../../build-twemoji';
 
-export type countryFlagIcon =
+type countryFlagIcon =
   | 'ac'
   | 'ad'
   | 'ae'
@@ -260,7 +260,13 @@ export type countryFlagIcon =
   | 'zm'
   | 'zw';
 
-export interface CountryFlagIcon {
+interface CountryFlagIcon {
   name: countryFlagIcon;
   data: string;
+}
+
+export {
+  TwemojiIcons,
+  countryFlagIcon,
+  CountryFlagIcon,
 }

@@ -4,7 +4,7 @@ import {
   NgxCountryFlagIconsModule,
   NgxCountryFlagIconsService,
 } from '@ngx-country-flag-icons/ngx-country-flag-icons';
-import { countryFlagIconEs } from '@ngx-country-flag-icons/icons-data';
+import { TwemojiIcons } from '@ngx-country-flag-icons/icons-data';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
@@ -22,7 +22,7 @@ import { AppComponent } from './app.component';
 export class AppModule {
   constructor(private countryFlagIconsService: NgxCountryFlagIconsService) {
     this.countryFlagIconsService.registerIcons([
-      countryFlagIconEs,
+      TwemojiIcons.countryFlagIconEs,
     ]);
   }
 }
