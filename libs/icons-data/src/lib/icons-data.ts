@@ -259,7 +259,15 @@ type countryFlagIcon =
   | 'yt'
   | 'za'
   | 'zm'
-  | 'zw';
+  | 'zw'
+  | 'es_ca'
+  | 'es_ga'
+  | 'gb_eng'
+  | 'gb_nir'
+  | 'gb_sct'
+  | 'gb_wls';
+
+// NOTE: These extra codes are included by icon sets like lipis flag-icon-css.
 
 interface CountryFlagIcon {
   name: countryFlagIcon;
