@@ -1,0 +1,27 @@
+<header class="flex">
+  <img
+    alt="Nx logo"
+    width="75"
+    src="https://nx.dev/assets/images/nx-logo-white.svg"
+  />
+  <h1>Welcome to {{ title }}!</h1>
+</header>
+
+<ul>
+  <li>
+    <a routerLink="america">America</a>
+  </li>
+  <li>
+    <a routerLink="africa">Africa</a>
+  </li>
+</ul>
+
+<h1>Lazy Loaded Modules</h1>
+
+<router-outlet></router-outlet>
+
+<h1>Lazy Loaded Flags at App Module</h1>
+
+<ngx-country-flag-icons name="co"></ngx-country-flag-icons>
+<ngx-country-flag-icons name="es"></ngx-country-flag-icons>
+<ngx-country-flag-icons name="tz"></ngx-country-flag-icons>
