@@ -40,5 +40,33 @@ function readTwemojiFlagIcons() {
   }
 }
 
+/**
+ * Read the `src-flag-icon-css` directory in order to rename each icon name to
+ * uppercase. This is used for the Lipis icons to keep same name generation on `svg-to-ts` script.
+ */
+function readLipisFlagIcons() {
+  const directoryPath = path.join(__dirname, '..', '..', 'src-flag-icon-css');
+  const outputPath = path.join(__dirname, '..', '..', 'out-flag-icon-css');
+  const fileList = fs.readdirSync(directoryPath);
+  if (!fs.existsSync(outputPath)) {
+    fs.mkdirSync(outputPath);
+  }
+  for (let i = fileList.length - 1; i >= 0; i--) {
+    const inputFile = fileList[i];
+    const outputFilename = path.parse(inputFile).name.toUpperCase() + '.svg';
+    fs.rename(
+      path.join(directoryPath, inputFile),
+      path.join(outputPath, outputFilename),
+      (err) => {
+        if (err) throw err;
+        console.log(`Renaming of ${inputFile} to ${outputFilename} completed.`);
+      }
+    );
+  }
+}
+
 // For Twemoji Icons conversion.
-readTwemojiFlagIcons();
+// readTwemojiFlagIcons();
+
+// For flag-icon-css conversion.
+// readLipisFlagIcons();
