@@ -134,6 +134,18 @@
       "sourceRoot": "libs/ngx-country-flag-icons/src",
       "prefix": "ngx-country-flag-icons",
       "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ngx-country-flag-icons/tsconfig.lib.json",
+            "project": "libs/ngx-country-flag-icons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ngx-country-flag-icons/tsconfig.lib.prod.json"
+            }
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {

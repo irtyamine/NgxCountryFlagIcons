@@ -41,9 +41,11 @@
     "@angular/platform-browser-dynamic": "^10.1.0",
     "@angular/router": "^10.1.0",
     "rxjs": "~6.6.2",
+    "tslib": "^2.0.0",
     "zone.js": "^0.11.1"
   },
   "devDependencies": {
+    "@angular-devkit/build-ng-packagr": "~0.1000.8",
     "@angular-devkit/build-angular": "~0.1001.0",
     "@angular/cli": "~10.1.0",
     "@angular/compiler-cli": "^10.1.0",
@@ -59,6 +61,7 @@
     "eslint": "7.8.1",
     "jest": "26.4.2",
     "jest-preset-angular": "8.3.1",
+    "ng-packagr": "^10.0.0",
     "prettier": "2.1.1",
     "source-map-explorer": "^2.5.0",
     "svg-to-ts": "^5.2.0",
