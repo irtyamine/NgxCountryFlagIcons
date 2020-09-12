@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AfricaCountries } from './africa-country-list';
 
 @Component({
   selector: 'app-africa',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AfricaComponent implements OnInit {
+  countries = AfricaCountries;
+
   constructor() { }
 
   ngOnInit() { }

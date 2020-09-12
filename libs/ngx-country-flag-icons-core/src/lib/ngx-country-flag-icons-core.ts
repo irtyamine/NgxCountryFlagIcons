@@ -1,4 +1,4 @@
-type countryFlagIcon =
+export type countryFlagIcon =
   | 'ac'
   | 'ad'
   | 'ae'
@@ -266,12 +266,7 @@ type countryFlagIcon =
 
 // NOTE: These extra codes are included by icon sets like lipis flag-icon-css.
 
-interface CountryFlagIcon {
+export interface CountryFlagIcon {
   name: countryFlagIcon;
   data: string;
-}
-
-export {
-  countryFlagIcon,
-  CountryFlagIcon,
 }

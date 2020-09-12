@@ -9,8 +9,11 @@
       "prefix": "ngx-country-flag-icons",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "outputPath": "dist/apps/ngx-country-flag-twemoji-showcase",
             "index": "apps/ngx-country-flag-twemoji-showcase/src/index.html",
             "main": "apps/ngx-country-flag-twemoji-showcase/src/main.ts",
@@ -21,7 +24,7 @@
               "apps/ngx-country-flag-twemoji-showcase/src/favicon.ico",
               "apps/ngx-country-flag-twemoji-showcase/src/assets"
             ],
-            "styles": ["apps/ngx-country-flag-twemoji-showcase/src/styles.css"],
+            "styles": ["apps/ngx-country-flag-twemoji-showcase/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -56,8 +59,11 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "browserTarget": "ngx-country-flag-twemoji-showcase:build"
           },
           "configurations": {
@@ -136,8 +142,11 @@
       "prefix": "ngx-country-flag-icons",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "outputPath": "dist/apps/ngx-country-flag-lipis-showcase",
             "index": "apps/ngx-country-flag-lipis-showcase/src/index.html",
             "main": "apps/ngx-country-flag-lipis-showcase/src/main.ts",
@@ -183,8 +192,11 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "browserTarget": "ngx-country-flag-lipis-showcase:build"
           },
           "configurations": {
