@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgxCountryFlagIconsModule, NgxCountryFlagIconsService } from '@ngx-country-flag-icons/ngx-country-flag-icons';
-import { TwemojiIcons } from '@ngx-country-flag-icons/icons-data';
+import { NgxCountryFlagIconsService } from '@kingdarboja/ngx-country-flag-icons-core';
+import {
+  countryFlagIconTz,
+  NgxCountryFlagIconsTwemojiModule,
+} from '@kingdarboja/ngx-country-flag-icons-twemoji';
 
 import { AfricaComponent } from './africa.component';
 import { AfricaRoutingModule } from './africa.routing';
@@ -11,13 +14,11 @@ import { AfricaRoutingModule } from './africa.routing';
   imports: [
     CommonModule,
     AfricaRoutingModule,
-    NgxCountryFlagIconsModule
-  ]
+    NgxCountryFlagIconsTwemojiModule,
+  ],
 })
 export class AfricaModule {
   constructor(private countryFlagIconsService: NgxCountryFlagIconsService) {
-    this.countryFlagIconsService.registerIcons([
-      TwemojiIcons.countryFlagIconTz,
-    ]);
+    this.countryFlagIconsService.registerIcons([countryFlagIconTz]);
   }
 }

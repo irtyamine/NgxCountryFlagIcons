@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CountryFlagIcon, countryFlagIcon } from '@ngx-country-flag-icons/icons-data';
+import { CountryFlagIcon, countryFlagIcon } from './ngx-country-flag-icons-core';
 
 @Injectable({
   providedIn: 'any',

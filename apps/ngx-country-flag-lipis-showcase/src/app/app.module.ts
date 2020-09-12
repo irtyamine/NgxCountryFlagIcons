@@ -1,28 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxCountryFlagIconsService } from '@kingdarboja/ngx-country-flag-icons-core';
 import {
-  NgxCountryFlagIconsModule,
-  NgxCountryFlagIconsService,
-} from '@ngx-country-flag-icons/ngx-country-flag-icons';
-import { LipisIcons } from '@ngx-country-flag-icons/icons-data';
+  NgxCountryFlagIconsLipisModule,
+  countryFlagIconEs,
+} from '@kingdarboja/ngx-country-flag-icons-lipis';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    NgxCountryFlagIconsModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, NgxCountryFlagIconsLipisModule, AppRoutingModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(private countryFlagIconsService: NgxCountryFlagIconsService) {
-    this.countryFlagIconsService.registerIcons([
-      LipisIcons.countryFlagIconEs,
-    ]);
+    this.countryFlagIconsService.registerIcons([countryFlagIconEs]);
   }
 }

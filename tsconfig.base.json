@@ -16,8 +16,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngx-country-flag-icons/ngx-country-flag-icons": [
-        "libs/ngx-country-flag-icons/src/index.ts"
+      "@kingdarboja/ngx-country-flag-icons-twemoji": [
+        "libs/ngx-country-flag-icons-twemoji/src/index.ts"
+      ],
+      "@kingdarboja/ngx-country-flag-icons-core": [
+        "libs/ngx-country-flag-icons-core/src/index.ts"
+      ],
+      "@kingdarboja/ngx-country-flag-icons-lipis": [
+        "libs/ngx-country-flag-icons-lipis/src/index.ts"
       ],
       "@ngx-country-flag-icons/icons-data": ["libs/icons-data/src/index.ts"]
     }

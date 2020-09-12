@@ -1,6 +1,3 @@
-import * as TwemojiIcons from './build-twemoji';
-import * as LipisIcons from './build-flag-icon-css';
-
 type countryFlagIcon =
   | 'ac'
   | 'ad'
@@ -275,8 +272,6 @@ interface CountryFlagIcon {
 }
 
 export {
-  TwemojiIcons,
-  LipisIcons,
   countryFlagIcon,
   CountryFlagIcon,
 }

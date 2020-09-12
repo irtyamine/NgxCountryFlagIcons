@@ -23,24 +23,30 @@
   },
   "projects": {
     "ngx-country-flag-twemoji-showcase": {
-      "tags": []
+      "tags": ["showcase"]
     },
     "ngx-country-flag-twemoji-showcase-e2e": {
       "tags": [],
       "implicitDependencies": ["ngx-country-flag-twemoji-showcase"]
     },
-    "ngx-country-flag-icons": {
-      "tags": []
-    },
-    "icons-data": {
-      "tags": []
-    },
     "ngx-country-flag-lipis-showcase": {
-      "tags": []
+      "tags": ["showcase"]
     },
     "ngx-country-flag-lipis-showcase-e2e": {
       "tags": [],
       "implicitDependencies": ["ngx-country-flag-lipis-showcase"]
+    },
+    "ngx-country-flag-icons-core": {
+      "tags": ["core"]
+    },
+    "ngx-country-flag-icons-twemoji": {
+      "tags": ["extension"]
+    },
+    "ngx-country-flag-icons-lipis": {
+      "tags": ["extension"]
+    },
+    "icons-data": {
+      "tags": ["assets"]
     }
   }
 }

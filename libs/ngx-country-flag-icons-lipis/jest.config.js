@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'ngx-country-flag-icons',
+  name: 'ngx-country-flag-icons-lipis',
   preset: '../../jest.config.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -12,7 +12,7 @@ module.exports = {
       ],
     },
   },
-  coverageDirectory: '../../coverage/libs/ngx-country-flag-icons',
+  coverageDirectory: '../../coverage/libs/ngx-country-flag-icons-lipis',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',

@@ -1,5 +1,5 @@
 {
-  "name": "@kingdarboja/ngx-country-flag-icons",
+  "name": "@kingdarboja/ngx-country-flag-icons-core",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.0.14",

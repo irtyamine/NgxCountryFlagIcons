@@ -6,9 +6,9 @@ import {
   Input,
   Optional,
 } from '@angular/core';
-import { NgxCountryFlagIconsService } from './ngx-country-flag-icons.service';
 import { DOCUMENT } from '@angular/common';
-import { countryFlagIcon } from '@ngx-country-flag-icons/icons-data';
+import { NgxCountryFlagIconsService } from './ngx-country-flag-icons-core.service';
+import { countryFlagIcon } from './ngx-country-flag-icons-core';
 
 @Component({
   selector: 'ngx-country-flag-icons',
