@@ -172,11 +172,23 @@
       "schematics": {}
     },
     "icons-data": {
+      "projectType": "library",
       "root": "libs/icons-data",
       "sourceRoot": "libs/icons-data/src",
-      "projectType": "library",
-      "schematics": {},
+      "prefix": "ngx-country-flag-icons",
       "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/icons-data/tsconfig.lib.json",
+            "project": "libs/icons-data/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/icons-data/tsconfig.lib.prod.json"
+            }
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -192,10 +204,12 @@
           "options": {
             "jestConfig": "libs/icons-data/jest.config.js",
             "tsConfig": "libs/icons-data/tsconfig.spec.json",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "setupFile": "libs/icons-data/src/test-setup.ts"
           }
         }
-      }
+      },
+      "schematics": {}
     },
     "ngx-country-flag-lipis-showcase": {
       "projectType": "application",

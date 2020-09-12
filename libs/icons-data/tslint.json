@@ -1,5 +1,20 @@
 {
   "extends": "../../tslint.json",
-  "linterOptions": { "exclude": ["!**/*"] },
-  "rules": {}
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ngxCountryFlagIcons",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ngx-country-flag-icons",
+      "kebab-case"
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
+  }
 }
