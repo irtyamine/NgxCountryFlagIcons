@@ -1,27 +1,41 @@
-<header class="flex">
-  <img
-    alt="Nx logo"
-    width="75"
-    src="https://nx.dev/assets/images/nx-logo-white.svg"
-  />
-  <h1>Welcome to {{ title }}!</h1>
+<header class="bg-blue-900 py-4">
+  <div class="container mx-auto text-center">
+    <img
+      alt="Nx logo"
+      width="75"
+      class="mx-auto"
+      src="https://nx.dev/assets/images/nx-logo-white.svg"
+    />
+    <h1 class="text-white font-bold text-2xl">Welcome to {{ title }}!</h1>
+  </div>
 </header>
 
-<ul>
-  <li>
-    <a routerLink="america">America</a>
-  </li>
-  <li>
-    <a routerLink="africa">Africa</a>
-  </li>
-</ul>
+<div class="bg-blue-800 py-4">
+  <div class="container mx-auto">
+    <h1 class="mb-2 font-semibold text-white text-lg">Lazy Loaded Modules</h1>
+    <ul class="flex items-center">
+      <li class="flex mr-6 border border-white rounded-full">
+        <a class="text-white p-4" routerLink="america">America</a>
+      </li>
+      <li class="flex mr-6 border border-white rounded-full">
+        <a class="text-white p-4" routerLink="africa">Africa</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
-<h1>Lazy Loaded Modules</h1>
+<div class="bg-blue-700 py-4">
+  <div class="container mx-auto">
+    <h1 class="mb-2 font-semibold text-white text-lg">Lazy Loaded Flags at App Module</h1>
 
-<router-outlet></router-outlet>
+    <ngx-country-flag-icons name="co"></ngx-country-flag-icons>
+    <ngx-country-flag-icons name="es"></ngx-country-flag-icons>
+    <ngx-country-flag-icons name="tz"></ngx-country-flag-icons>
+  </div>
+</div>
 
-<h1>Lazy Loaded Flags at App Module</h1>
-
-<ngx-country-flag-icons name="co"></ngx-country-flag-icons>
-<ngx-country-flag-icons name="es"></ngx-country-flag-icons>
-<ngx-country-flag-icons name="tz"></ngx-country-flag-icons>
+<div class="bg-gray-200 py-4">
+  <div class="container mx-auto">
+    <router-outlet></router-outlet>
+  </div>
+</div>

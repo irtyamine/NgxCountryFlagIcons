@@ -157,7 +157,7 @@
               "apps/ngx-country-flag-lipis-showcase/src/favicon.ico",
               "apps/ngx-country-flag-lipis-showcase/src/assets"
             ],
-            "styles": ["apps/ngx-country-flag-lipis-showcase/src/styles.css"],
+            "styles": ["apps/ngx-country-flag-lipis-showcase/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
