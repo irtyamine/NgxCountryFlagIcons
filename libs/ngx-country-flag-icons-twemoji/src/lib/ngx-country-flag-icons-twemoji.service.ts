@@ -11,8 +11,8 @@ import {
 export class NgxCountryFlagIconsTwemojiService {
   constructor(private registryService: NgxCountryFlagIconsService) {}
 
-  public disableWarnings() {
-    this.registryService.disableWarnings();
+  public enableWarnings() {
+    this.registryService.enableWarnings();
   }
 
   public registerIcons(icons: CountryFlagIcon[]): void {

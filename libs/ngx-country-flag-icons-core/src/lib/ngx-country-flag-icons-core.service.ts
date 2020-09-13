@@ -5,11 +5,11 @@ import { CountryFlagIcon, countryFlagIcon } from './ngx-country-flag-icons-core'
   providedIn: 'any',
 })
 export class NgxCountryFlagIconsService {
-  private warnings = true;
+  private warnings = false;
   private registry = new Map<string, string>();
 
-  public disableWarnings() {
-    this.warnings = false;
+  public enableWarnings() {
+    this.warnings = true;
   }
 
   public registerIcons(icons: CountryFlagIcon[]): void {
