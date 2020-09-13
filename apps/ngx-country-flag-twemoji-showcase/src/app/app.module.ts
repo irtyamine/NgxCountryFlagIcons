@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxCountryFlagIconsService } from '@kingdarboja/ngx-country-flag-icons-core';
 import {
   NgxCountryFlagIconsTwemojiModule,
+  NgxCountryFlagIconsTwemojiService,
   countryFlagIconEs,
 } from '@kingdarboja/ngx-country-flag-icons-twemoji';
 
@@ -15,7 +15,10 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor(private countryFlagIconsService: NgxCountryFlagIconsService) {
+  constructor(
+    private countryFlagIconsService: NgxCountryFlagIconsTwemojiService
+  ) {
     this.countryFlagIconsService.registerIcons([countryFlagIconEs]);
+    // this.countryFlagIconsService.registerAllIcons();
   }
 }

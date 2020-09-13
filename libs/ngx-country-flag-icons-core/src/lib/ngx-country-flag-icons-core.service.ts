@@ -5,7 +5,12 @@ import { CountryFlagIcon, countryFlagIcon } from './ngx-country-flag-icons-core'
   providedIn: 'any',
 })
 export class NgxCountryFlagIconsService {
+  private warnings = true;
   private registry = new Map<string, string>();
+
+  public disableWarnings() {
+    this.warnings = false;
+  }
 
   public registerIcons(icons: CountryFlagIcon[]): void {
     icons.forEach((icon: CountryFlagIcon) =>
@@ -13,8 +18,8 @@ export class NgxCountryFlagIconsService {
     );
   }
 
-  public getIcon(iconName: countryFlagIcon, warnings = false): string | undefined {
-    if (!this.registry.has(iconName) && warnings) {
+  public getIcon(iconName: countryFlagIcon): string | undefined {
+    if (!this.registry.has(iconName) && this.warnings) {
       console.warn(
         `We could not find the Icon with the name ${iconName}, did you add it to the Icon registry?`
       );
