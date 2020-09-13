@@ -27,7 +27,9 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "generate-icons": "svg-to-ts",
-    "analyze": "ng build --prod --sourceMap --namedChunks && source-map-explorer './dist/**/*.js' --html result.html --only-mapped"
+    "analyze:twemoji": "nx build ngx-country-flag-twemoji-showcase --prod --sourceMap --namedChunks && npm run analyzer -- './dist/apps/ngx-country-flag-twemoji-showcase/*.js'",
+    "analyze:lipis": "nx build ngx-country-flag-lipis-showcase --prod --sourceMap --namedChunks && npm run analyzer -- './dist/apps/ngx-country-flag-lipis-showcase/*.js'",
+    "analyzer": "source-map-explorer --html result.html --only-mapped"
   },
   "private": true,
   "dependencies": {
